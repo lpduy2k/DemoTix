@@ -1,0 +1,61 @@
+.tixCarousel__content{
+    padding-top: 70px;
+    position: relative;
+    &:hover .play{
+        display: block;
+    }
+    .item{
+        img{
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center; 
+        }
+    }
+    .navbar-carousel{
+        position: absolute;
+        width: 70%;
+        margin: 0 auto;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 15px rgba(0,0,0,.3);
+        z-index: 100;
+        .navbar{
+            height: 70px;
+            border-radius: 5px;
+            .nav-item{
+                width: 100%;
+                .nav-link{
+                    margin-left: 10px;
+                    color: $color-black-1;
+                    border-right: 1px solid $color-grey-2;
+                }
+                .dropdown-toggle::after{
+                    float: right;
+                    font-size: 20px;
+                    color: $color-grey-1;
+                    margin-top: 7px;
+                }
+                .buy-ticket{
+                    padding: 10px 15px;
+                    background-color: $color-black-0;
+                    border-radius: 5px;
+                    text-align: center;
+                    color: $color-white-0;
+                    width: 86%;
+                }
+            }
+        }
+    }
+}
+
+.tixCarousel__content{
+    @include responsive("large") {
+        .navbar-carousel{
+            display: none;
+        }
+    }
+}
+

@@ -1,0 +1,195 @@
+.cinema {
+    .cinema__content {
+        margin: 80px auto 0 auto;
+        width: 70%;
+        padding-bottom: 40px;
+        .nav-pills {
+            border-top: 1px solid $color-grey-3;
+            border-bottom: 1px solid $color-grey-3;
+            border-left: 1px solid $color-grey-3;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            height: 600px;
+            .nav-link {
+                background-color: $color-white-0;
+                opacity: 0.5;
+                .img-border-bot {
+                    padding: 5px 0 10px 0;
+                    border-bottom: 1px solid $color-grey-3;
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .nav-link:hover,
+            .nav-link.active{
+                opacity: 1;
+                border-left: 1px solid $color-grey-3;
+            }
+        }
+        .tab-content {
+            border: 1px solid $color-grey-3;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            height: 600px;
+            .nav-pills{
+                border-left: none;
+                border-top: none;
+                border-bottom: none;
+                .border-bot {
+                    border-bottom: 1px solid $color-grey-3;
+                    .right {
+                        span{
+                            @include styleText($color-green-0, $fs-1, $fw-1);
+                        }
+                        .star{
+                            color: $color-pink-0;
+                        }
+                        .ddc{
+                            color: $color-grey-6;
+                        }
+                        .mega{
+                            color: $color-orange-0;
+                        }
+                        .dcine{
+                            color: $color-black-1;
+                        }
+                        .lotte{
+                            color: $color-red-2;
+                        }
+                        p{
+                            @include styleText($color-grey-4, $fs-0, $fw-0);
+                        }
+                        a{
+                            text-decoration: none;
+                            color: $color-red-0;
+                            
+                        }
+                    }
+                }
+                .nav-link.active, 
+                .show>.nav-link{
+                    color: $color-black-1!important;
+                }
+            }
+            .tab-content{
+                .tab-pane{
+                    .border-bot{
+                        border-bottom: 1px solid $color-grey-3;
+                        .top{
+                            background-color: $color-white-0;
+                            border: none;
+                            &:focus{
+                                outline: none;              
+                            }
+                            &:focus .bot{
+                                display: none;
+                            }
+                            .top__content{
+                                .title{
+                                    @include styleText($color-black-1, $fs-0, $fw-1);
+                                    .p-1{
+                                        line-height: 20px;
+                                        @include styleText($color-white-0, $fs-0, $fw-0);
+                                        background-color: $color-red-0;
+                                        border-radius: 5px;
+                                    }
+                                }
+                                .text{
+                                    text-align: left;
+                                    @include styleText($color-grey-0, $fs-0, $fw-1);
+                                }
+                            }
+                        }
+                        .bot{
+                            .time__item{
+                                .time{
+                                    display: inline-block;
+                                    @include styleText($color-grey-0, $fs-0, $fw-1);
+                                    padding: 4px 7px;
+                                    background-color: rgba(246,246,246,.5);
+                                    border: 1px solid $color-grey-5;
+                                    text-decoration: none;
+                                    border-radius: 5px;
+                                    margin-right: 5px;
+                                    margin-bottom: 9px;
+                                    .time-icon{
+                                        @include styleText($color-green-1, $fs-2, $fw-1);
+                                    }
+                                    &:hover .time-icon{
+                                        @include styleText($color-red-0, $fs-2, $fw-1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .selectScroll{
+                max-height: 600px!important;
+                overflow-y: scroll!important;
+                &::-webkit-scrollbar {
+                    width: 4px;
+                }                      
+                &::-webkit-scrollbar-track {
+                    border-radius: 10px;
+                    background-color: $color-grey-2;
+                    
+                }
+                     
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 10px;
+                    background-color: $color-grey-0;
+                }
+            }
+        }
+    }
+}
+
+.cinema{
+    .cinema__content{
+        @include responsive("extra-large") {
+            .nav-pills{
+                height: 650px; 
+            }
+            .tab-content{
+                height: 650px;
+                .selectScroll{
+                    max-height: 650px!important;
+                }
+            }
+            
+        }
+        @include responsive("large") {
+            .nav-pills{
+                height: 860px; 
+            }
+            .tab-content{
+                height: 860px;
+                .selectScroll{
+                    max-height: 860px!important;
+                }
+            }
+        }
+        @include responsive("medium") {
+            .nav-pills{
+                height: 550px; 
+            }
+            .tab-content{
+                height: 550px;
+                .selectScroll{
+                    max-height: 550px!important;
+                }
+            }
+    
+        }
+        @include responsive("small") {
+    
+        }
+    }
+}
+
+
+

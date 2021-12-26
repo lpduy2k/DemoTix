@@ -1,0 +1,104 @@
+.app_content {
+    margin-top: 50px;
+    background-image: url(../img/backapp.jpg);
+    background-size: contain;
+    .application__left {
+        color: $color-white-0;
+        font-size: $fs-2;
+        margin-top: 150px;
+        padding-left: 150px;
+        h1 {
+            font-weight: $fw-1;
+            font-size: $fs-4;
+        }
+        button {
+            background-color: $color-red-3;
+            color: $color-white-0;
+            border-radius: 5px;
+            font-weight: $fw-1;
+            border: none;
+            padding: 15px 20px;
+        }
+        .application__textAppUnder {
+            span {
+                border-bottom: 1px solid $color-white-0;
+                a {
+                    color: $color-white-0;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .application__right {
+        margin-top: 150px;
+        margin-bottom: 100px;
+        padding-left: 150px;
+        img {
+            display: block;
+            height: auto;
+        }
+        .application__slick-slider{
+            position: relative;
+            .application__phone-img {
+                width: 220px;
+            }
+            .application__draggable {
+                position: absolute;
+                display: block;
+                width: 207px;
+                top: 10px;
+                left: 6.9px;
+                .owl-stage-outer{
+                    border-radius: 20px;
+                }
+                .application__picture {
+                    width: 207px;
+                    img {                          
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.app_content {
+    @include responsive("large") {
+        .application__left {
+            font-size: $fs-1;
+            h1 {
+                font-size: $fs-3;
+            }
+        }
+    }
+    @include responsive("medium") {
+        text-align: center;
+        .application__left{
+            font-size: $fs-1;
+            margin-top: 50px;
+            padding: 0 50px;
+        }
+        .application__right{
+            padding: 0;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            display: flex;
+            .application__slick-slider{
+                margin: 0 auto;
+                .application__phone-img {
+                    width: 330px;
+                }
+                .application__draggable {
+                    width: 310px;
+                    top: 15px;
+                    left: 10.6px;
+                    .application__picture {
+                        width: 310px;
+                    }
+                }
+            }
+        }
+    } 
+}
+
+

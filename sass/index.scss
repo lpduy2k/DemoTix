@@ -1,0 +1,15 @@
+@import './Helper/variables';
+@import './Helper/mixin';
+
+@import './Base/reset';
+@import './Base/customize';
+
+@import './Components/button';
+
+@import './Layouts/header';
+@import './Layouts/tixCarousel';
+@import './Layouts/movies';
+@import './Layouts/cinema';
+@import './Layouts/information';
+@import './Layouts/app';
+@import './Layouts/footer';

@@ -1,0 +1,50 @@
+// mau
+$color-white-0: #fff;
+$color-black-0: #4a4a4a;
+$color-black-1: #000;
+$color-black-2: #222222;
+$color-red-0: #fb4226;
+$color-red-1: #fa5238;
+$color-red-2: #ca4137;
+$color-red-3: #e71a0f;
+$color-red-5: #ff0000;
+$color-grey-0: #9b9b9b;
+$color-grey-1:#869791;
+$color-grey-2: #d8d8d8;
+$color-grey-3: #ddd;
+$color-grey-4: #949494;
+$color-grey-5: #e4e4e4;
+$color-grey-6: #9c9c9c;
+$color-grey-7: #4a4a4a;
+$color-green-0: #8bc541;
+$color-green-1: #108f3e;
+$color-blue-0: #60c5ef;
+$color-pink-0: #df0d7a;
+$color-orange-0: #e5a813;
+$color-transparent: transparent;
+// fs
+$fs-0: 13px;
+$fs-1: 14px;
+$fs-2: 20px;
+$fs-3: 30px;
+$fs-4: 40px;
+
+// fw
+$fw-0: 400;
+$fw-1: 500;
+$fw-2: 700;
+
+// line-height
+$lh-0: 22px;
+
+
+// border
+
+
+// break points
+$breakpoints:(
+    'extra-large': 1200px,
+    'large' : 992px,
+    'medium' : 767px,
+    'small' : 576px,
+)

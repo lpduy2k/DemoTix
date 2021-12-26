@@ -1,0 +1,100 @@
+.header__content {
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    background-color: rgba(255,255,255,.95);
+    box-shadow: 0 0 15px rgba(0,0,0,.3);
+    z-index: 9999;
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        .header__logo {
+            img {
+                width: 50px;
+            }
+        }
+        .header__item {
+            padding-left: 13.5%;
+            .navbar-collapse {
+                .navbar-nav {
+                    flex-direction: row;
+                    .nav-item{
+                        a{
+                            padding-right: 0.7rem;
+                            padding-left: 0.7rem;
+                            @include styleText($color-black-0,$fs-1,$fw-1);
+                            transition: all 0.5s;
+                            &:hover{
+                                @include styleText($color-red-0,$fs-1,$fw-1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .header__right {
+            float: right;
+            .nav-item {
+                .color-grey {
+                    @include styleText($color-grey-0,$fs-1,$fw-0);
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                    }
+                }                
+            }
+            .dropdown{
+                .dropdown-menu.selectScroll {
+                    max-height: 290px!important;
+                    overflow-y: scroll!important;
+                    &::-webkit-scrollbar {
+                        width: 4px;
+                    }                      
+                    &::-webkit-scrollbar-track {
+                        border-radius: 10px;
+                        background-color: $color-grey-2;
+                        
+                    }
+                         
+                    &::-webkit-scrollbar-thumb {
+                        border-radius: 10px;
+                        background-color: $color-grey-0;
+                    }
+                    a{
+                        &:hover {
+                            background-color: $color-blue-0;
+                            color: $color-white-0;
+                        }
+                    }
+                }
+            }
+        }
+        .align-right{
+            font-size: $fs-3;
+        }
+    }
+}
+
+.header__content {
+    @include responsive("large") {
+        .header__item {
+            .navbar-collapse {
+                .navbar-nav {
+                    .nav-link {
+                        padding-right: 0.7rem;
+                        padding-left: 0.7rem;
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("medium") {
+        .header__item {
+            display: none;
+        }
+        .header__right {
+            display: none!important;
+        }
+    }
+}
